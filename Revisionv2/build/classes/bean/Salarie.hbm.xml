@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="bean.Salarie" table="Salarie">
+      <meta attribute="class-description">
+         cette classe contient les details des salaries  
+      </meta>
+      <id name="id_salarie"  column="id_salarie">
+         <generator class="native"/>
+      </id>
+      <property name="nom" type="string"/> 
+       <property name="grade" type="string"/>   
+       <set name="Conge" table="conge" fetch="select" cascade="save-update, delete"   >
+			<key>
+				<column name="id_salarie" not-null="true"></column>
+			</key>
+			<one-to-many class="bean.Conge"/>
+		</set>
+   </class>
+</hibernate-mapping>

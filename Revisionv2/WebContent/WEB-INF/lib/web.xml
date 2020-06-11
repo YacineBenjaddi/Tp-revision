@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ISITest1</display-name>
+	<servlet>
+		<description> ma première servlet 
+		</description>
+		<display-name>MyServlet</display-name>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>web.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>listetd</display-name>
+		<servlet-name>listetd</servlet-name>
+		<servlet-class>web.listetd</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>getAllStudents</display-name>
+		<servlet-name>getAllStudents</servlet-name>
+		<servlet-class>web.getAllStudents</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>getOneStudent</display-name>
+		<servlet-name>getOneStudent</servlet-name>
+		<servlet-class>web.getOneStudent</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/ajouterEtd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>listetd</servlet-name>
+		<url-pattern>/listetd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>getAllStudents</servlet-name>
+		<url-pattern>/getAllStudents</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>getOneStudent</servlet-name>
+		<url-pattern>/getOneStudent</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
